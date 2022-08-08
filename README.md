@@ -1,16 +1,16 @@
 
-# NULLSER-MD
+# NULL-MODZ-MD
 
 <p align="center">
   <a href="https://www.instagram.com/null_modz/"><img src="https://i.imgur.com/J6NSaKM.jpeg" width="500" alt="Profile"/> </a>
 </p>
 <p align="center">
-NULL-MODZ Bot Multi Device is a automated whatsapp bot created by <a href="https://github.com/NULLMODZ" target="_blank">NULL</a> using <a href="https://github.com/adiwajshing/Baileys" target="_blank">Baileys</a> and <a href="https://github.com/nodejs" target="_blank">Nodejs</a>. Dont forget to give a star 🍭.
+NULL-MODZ Bot Multi Device is a automated whatsapp bot created by <a href="https://github.com/NULLMODZ" target="_blank">Windro</a> using <a href="https://github.com/adiwajshing/Baileys" target="_blank">Baileys</a> and <a href="https://github.com/nodejs" target="_blank">Nodejs</a>. Dont forget to give a star 🍭.
 </p>
 
 ## ```Connect With Me```
 <p align="center">
-<a href="https://wa.me/918606413490"><img src="https://img.shields.io/badge/Contact NULL-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></P>
+<a href="https://wa.me/918606413490"><img src="https://img.shields.io/badge/Contact Developer Windro-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></P>
 
 
 ## ```Bot Support Groups```
