@@ -318,7 +318,7 @@ message: {
 "mimetype": "image/jpeg",
 "jpegThumbnail": log0 //The picture
 },
-"title": `*WINDRO*`, 
+"title": `WINDRO`, 
 "description": `Null Modz MD`, 
 "currencyCode": "USD",
 "priceAmount1000": "2000",
@@ -339,7 +339,7 @@ orderMessage: {
 itemCount : 1,
 status: 1,
 surface : 1,
-message: `*WINDRO*`, //
+message: `WINDRO`, //
 orderTitle: `Null Modz MD`,
 thumbnail: log0, //Pic
 sellerJid: '0@s.whatsapp.net'
@@ -381,7 +381,7 @@ participant: `0@s.whatsapp.net`, ...(from ?
 message: { 
 "videoMessage": { 
 "title": `Null Modz MD`,
-"h": `*WINDRO*`,
+"h": `WINDRO`,
 'seconds': '30', 
 'caption': `${global.watermark}`,
 'jpegThumbnail': log0
@@ -398,7 +398,7 @@ const fgclink = {
 "message": {
 "groupInviteMessage": {
 "groupJid": "916909137213-1616169743@g.us",
-"inviteCode": `*WINDRO*`,
+"inviteCode": `WINDRO`,
 "groupName": `Null Modz MD`, 
 "caption":`${global.watermark}`, 
 'jpegThumbnail': log0
@@ -415,7 +415,7 @@ participant: `0@s.whatsapp.net`, ...(from ?
 message: { 
  "videoMessage": { 
  "title":`Null Modz MD`,
- "h": `*WINDRO*`,
+ "h": `WINDRO`,
  'seconds': "30", 
  'gifPlayback': 'true', 
  'caption': `${global.watermark}`,
@@ -432,7 +432,7 @@ participant: `0@s.whatsapp.net`, ...(from ?
 },
 message: { 
 "extendedTextMessage": {
- "text":`*WINDRO*`,
+ "text":`WINDRO`,
 "title": `Null Modz MD`,
  'jpegThumbnail': log0
 }
@@ -1057,7 +1057,7 @@ const latensie = speed() - timestampe
 │𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
 │𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
 │𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : *NULL BOT*
-│𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : *WINDRO*
+│𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : WINDRO
 │𝗢𝘄𝗻𝗲𝗿 𝗡𝗼. : *+91 8606413490*
 │𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
 │𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
@@ -1188,7 +1188,7 @@ if (q.includes('--help')) return reply(examkosong)
      teksehmazeh += `*🐄Cow* : ${getSapi(m.sender)}\n`
      teksehmazeh += `*🐘Elephant* : ${getGajah(m.sender)}\n\n`
      teksehmazeh += `_*${pushname}*_`
-     await NULLMODZ.send5ButImg(from, `` + '' + teksehmazeh, `© ${botname}`, NULLMODZ, [{"urlButton": {"displayText": "YouTube📍","url": `${websitex}`}}])
+     await NULLMODZ.send5ButImg(from, `` + '' + teksehmazeh, `© ${botname}`, NULLMODZ, [{"urlButton": {"displayText": "YouTube📍","url": `${global.websitex}`}}])
   }
   break
         case 'userlimit': 
@@ -2582,7 +2582,7 @@ if (isBanChat) return reply(mess.banChat)
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!isCreator) return replay(mess.owner)
-if (!args.join(" ")) return replay(`Where is the text?\n\nExample : ${prefix + command} *WINDRO*`)
+if (!args.join(" ")) return replay(`Where is the text?\n\nExample : ${prefix + command} WINDRO`)
 let getGroups = await NULLMODZ.groupFetchAllParticipating()
 let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
 let anu = groups.map(v => v.id)
@@ -2592,7 +2592,7 @@ await sleep(1500)
 let btn = [{
 urlButton: {
 displayText: 'WebSite 💌',
-url: `https://teamnullmodz.netlify.app/`
+url: `${global.websitex}`
 }
 }, {
 urlButton: {
@@ -2615,7 +2615,7 @@ displayText: 'Owner ☠️',
 id: 'owner'
 }
 }]
-let txt = `*「 *WINDRO*'s Broadcast」*\n\n${text}`
+let txt = `*「 WINDRO's Broadcast」*\n\n${text}`
 NULLMODZ.send5ButImg(i, txt, `Null Modz MD`, log0, btn, thum)
 }
 replay(`Successfully Sent Broadcast To ${anu.length} Group`)
@@ -2625,7 +2625,7 @@ case 'bc': case 'broadcast': case 'bcall': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!isCreator) return replay(mess.owner)
-if (!args.join(" ")) return replay(`Where is the text??\n\nExample : ${prefix + command} *WINDRO*`)
+if (!args.join(" ")) return replay(`Where is the text??\n\nExample : ${prefix + command} WINDRO`)
 let anu = await store.chats.all().map(v => v.id)
 replay(`Send Broadcast To ${anu.length} Chat\nTime's up ${anu.length * 1.5} second`)
 for (let yoi of anu) {
@@ -2633,7 +2633,7 @@ await sleep(1500)
 let btn = [{
 urlButton: {
 displayText: 'WebSite 💌',
-url: `https://teamnullmodz.netlify.app/`
+url: `${global.websitex}`
 }
 }, {
 urlButton: {
@@ -2656,7 +2656,7 @@ displayText: 'Owner ☠️',
 id: 'owner'
 }
 }]
-let txt = `*「 *WINDRO*'s Broadcast」*\n\n${text}`
+let txt = `*「 WINDRO's Broadcast」*\n\n${text}`
 NULLMODZ.send5ButImg(yoi, txt, `Null Modz MD`, log0, btn, thum)
 }
 replay('Broadcast Success')
@@ -2675,7 +2675,7 @@ if (!isCreator) return replay(mess.owner)
                     let butoon = [{
                                 urlButton: {
                                 displayText: 'WebSite 💌',
-url: `https://teamnullmodz.netlify.app/`
+url: `${global.websitex}`
                                 }
                             }, {
 urlButton: {
@@ -2703,10 +2703,10 @@ id: 'owner'
                     if (/webp/.test(mime)) {
                     NULLMODZ.sendMessage(i, { sticker: { url: media } }, { quoted: ftroli })
                     } else if (/image/.test(mime)) {
-                    let DGXeon = `*「 *WINDRO*'s Broadcast」*${text ? '\n\n' + text : ''}`
+                    let DGXeon = `*「 WINDRO's Broadcast」*${text ? '\n\n' + text : ''}`
                     NULLMODZ.send5ButImg(i, DGXeon, `Null Modz MD`, buffer, butoon)
                     } else if (/video/.test(mime)) {
-                    let DGXeon = `*「 *WINDRO*'s Broadcast」*${text ? '\n\n' + text : ''}`
+                    let DGXeon = `*「 WINDRO's Broadcast」*${text ? '\n\n' + text : ''}`
                     NULLMODZ.sendMessage(i, {video: buffer, caption: `${DGXeon}`}, { quoted: ftroli })
                     } else if (/audio/.test(mime)) {
                     NULLMODZ.sendMessage(i, {audio: buffer, mimetype: 'audio/mpeg'}, { quoted : ftroli })
@@ -4716,7 +4716,7 @@ case 'watercolor': case 'multicolor': case 'neondevil': case 'underwater': case 
 case 'chocolate': case 'strawberry': case 'matrix': case 'blood': case 'dropwater': case 'toxic': 
 case 'lava': case 'rock': case 'bloodglas': case 'halloween': case 'darkgold': case 'joker': case 'wicker':
  case 'firework': case 'skeleton': case 'blackpink': case 'sand': case 'glue': case '1917': case 'leaves': case 'demon': {
-             if (!q) return reply(`Example : ${prefix + command} *WINDRO*`) 
+             if (!q) return reply(`Example : ${prefix + command} WINDRO`) 
                 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
              reply(mess.wait)
@@ -4788,11 +4788,11 @@ case 'textmaker': {
 if (isBanChat) return reply(mess.banChat)
 if (args.length < 1) return reply(`Example :\n${prefix + command} <name>`)
 if (args[0] === 'glitch') {
-if (args.length < 2) return reply(`Example :\n${prefix + command + ' ' + args[0]} *WINDRO*`)
+if (args.length < 2) return reply(`Example :\n${prefix + command + ' ' + args[0]} WINDRO`)
 let teds = await thiccysapi.textpro("https://textpro.me/create-impressive-glitch-text-effects-online-1027.html", [args[1]])
 NULLMODZ.sendMessage(from, {image:{url:teds}, caption:"Done!"}, {quoted:m})
 } else if (args[0] === 'glow') {
-if (args.length < 2) return reply(`Example :\n${prefix + command + ' ' + args[0]} *WINDRO*`)
+if (args.length < 2) return reply(`Example :\n${prefix + command + ' ' + args[0]} WINDRO`)
 let teds = await thiccysapi.textpro("https://textpro.me/create-light-glow-sliced-text-effect-online-1068.html", [args[1]])
 NULLMODZ.sendMessage(from, {image:{url:teds}, caption:"Done!"}, {quoted:m})
 } else {
@@ -5539,11 +5539,11 @@ footer: `Null Modz MD`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
-title:`*WINDRO*`,
+title:`WINDRO`,
 body:`${global.watermark}`,
 thumbnail: log0,
 mediaType:2,
-mediaUrl: `https://teamnullmodz.netlify.app/`,
+mediaUrl: `${global.websitex}`,
 sourceUrl: `{global.websitex}`
 }}
 }
@@ -5687,11 +5687,11 @@ if (!args[0]) return reply(`Where's the link ?`)
 try {
 NULLMODZ.sendMessage(from, {video:{url:args[0]}, caption:"Succes", contextInfo:{externalAdReply:{
 title:`Null Modz MD`,
-body:`*WINDRO*`,
+body:`WINDRO`,
 thumbnail: log0,
 mediaType:2,
-mediaUrl: `https://teamnullmodz.netlify.app/`,
-sourceUrl: `https://teamnullmodz.netlify.app/`
+mediaUrl: `${global.websitex}`,
+sourceUrl: `${global.websitex}`
 }}}, {quoted:m})
 } catch {
 reply("Link error!")
@@ -5705,11 +5705,11 @@ if (!args[0]) return reply(`Where's the link?`)
 try {
 NULLMODZ.sendMessage(from, {image:{url:args[0]}, caption:"Success", contextInfo:{externalAdReply:{
 title:`Null Modz MD`,
-body:`*WINDRO*`,
+body:`WINDRO`,
 thumbnail: log0,
 mediaType:2,
-mediaUrl: `https://teamnullmodz.netlify.app/`,
-sourceUrl: `https://teamnullmodz.netlify.app/`
+mediaUrl: `${global.websitex}`,
+sourceUrl: `${global.websitex}`
 }}}, {quoted:m})
 } catch {
 reply("Link error")
@@ -6055,7 +6055,7 @@ case 'lava': case 'rock': case 'bloodglas': case 'hallowen': case 'darkgold': ca
  case 'firework': case 'skeleton': case 'blackpink': case 'sand': case 'glue': case '1917': case 'leaves': {
  	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-              if (!q) return reply(`Example : ${prefix + command} *WINDRO*`) 
+              if (!q) return reply(`Example : ${prefix + command} WINDRO`) 
           
              let link
              if (/candy/.test(command)) link = 'https://textpro.me/create-christmas-candy-cane-text-effect-1056.html'
@@ -6170,7 +6170,7 @@ if (isBanChat) return reply(mess.banChat)
 				{
 					"urlButton": {
 						"displayText": "Watch🎥",
-						"url": `${websitex}`
+						"url": `${global.websitex}`
 						}
 					}
 				]
@@ -6197,7 +6197,7 @@ if (isBanChat) return reply(mess.banChat)
 				{
 					"urlButton": {
 						"displayText": "YouTube📍",
-						"url": `${websitex}`
+						"url": `${global.websitex}`
 						}
 					}
 				]
@@ -6223,7 +6223,7 @@ if (isBanChat) return reply(mess.banChat)
 				{
 					"urlButton": {
 						"displayText": "YouTube📍",
-						"url": `${websitex}`
+						"url": `${global.websitex}`
 						}
 					}
 				]
@@ -7478,7 +7478,7 @@ buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title: res.title,
-body: `*WINDRO*`,
+body: `WINDRO`,
 thumbnail: {url:res.thumb},
 mediaType:2,
 mediaUrl: args[0],
@@ -7500,8 +7500,8 @@ title:`Null Modz MD`,
 body:`Null Modz MD`,
 thumbnail: log0,
 mediaType:2,
-mediaUrl: `https://teamnullmodz.netlify.app/`,
-sourceUrl: `https://teamnullmodz.netlify.app/`
+mediaUrl: `${global.websitex}`,
+sourceUrl: `${global.websitex}`
 }}}, {quoted:m})
 }
 break
@@ -7513,8 +7513,8 @@ title:`Null Modz MD`,
 body:`Null Modz MD`,
 thumbnail: log0,
 mediaType:2,
-mediaUrl: `https://teamnullmodz.netlify.app/`,
-sourceUrl: `https://teamnullmodz.netlify.app/`
+mediaUrl: `${global.websitex}`,
+sourceUrl: `${global.websitex}`
 }}}, {quoted:m})
 }
 break
@@ -7564,11 +7564,11 @@ buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title:`Null Modz MD`,
-body:`*WINDRO*`,
+body:`WINDRO`,
 thumbnail: log0,
 mediaType:2,
-mediaUrl: `https://teamnullmodz.netlify.app/`,
-sourceUrl: `https://teamnullmodz.netlify.app/`
+mediaUrl: `${global.websitex}`,
+sourceUrl: `${global.websitex}`
 }}
 }
 NULLMODZ.sendMessage(m.chat, buttonMessage, { quoted: m })
@@ -8143,7 +8143,7 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
 case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-teks = `*「 Null Modz MD Script 」*\n\nYouTube: https://teamnullmodz.netlify.app/\nGitHub: https://github.com/NULLMODZ/NULL-MODZ-MD\n\nDont forget to donate 🍜`
+teks = `*「 Null Modz MD Script 」*\n\nYouTube: ${global.websitex}\nGitHub: https://github.com/NULLMODZ/NULL-MODZ-MD\n\nDont forget to donate 🍜`
 let buttons = [
 {buttonId: `menu`, buttonText: {displayText: 'Menu 🌺'}, type: 1}
 ]
@@ -8172,12 +8172,12 @@ if (isBanChat) return reply(mess.banChat)
 NULLMODZ.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 	                let btn = [{
                                 urlButton: {
-                                    displayText: 'YouTube 🍒',
-                                    url: `${websitex}`
+                                    displayText: 'WebSite 💌',
+                                    url: `https://teamnullmodz.netlify.app/`
                                 }
                             }, {
                                 callButton: {
-                                    displayText: 'Script 🍜',
+                                    displayText: 'Script 👽',
                                     url: `${botscript}`
                                 }
                             }, {
@@ -8192,7 +8192,7 @@ NULLMODZ.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }}
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner 🤣',
+                                    displayText: 'Owner ☠️',
                                     id: 'owner'
                                 }
                             }]
@@ -8209,11 +8209,11 @@ NULLMODZ.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }}
                         /////////NULLMODZ.send5ButMsg(m.chat, menulist, global.botname, btn)
                         } else if (setbot.templateDocument) {
                         let buttonmenu = [
-        	{ urlButton: { displayText: `YouTube 🍒`, url : `${websitex}` } },
-            { urlButton: { displayText: `Script 🍜`, url: `${botscript}` } },
+        	{ urlButton: { displayText: `WebSite 💌`, url : `${global.websitex}` } },
+            { urlButton: { displayText: `Script 👽`, url: `${botscript}` } },
             { quickReplyButton: { displayText: `All Menu 🍱`, id: 'allmenu'} },
             { quickReplyButton: { displayText: `List Menu 🍢`, id: 'command'} },
-            { quickReplyButton: { displayText: `Owner 🤣`, id: 'owner'} }
+            { quickReplyButton: { displayText: `Owner ☠️`, id: 'owner'} }
         	]
         	NULLMODZ.sendMessage(m.chat, { caption: menulist, video: fs.readFileSync('./NullMedia/theme/menu.mp4'), templateButtons: buttonmenu, footer: `${botname}`, mentionedJid: [m.sender] })
                         }
@@ -9099,7 +9099,7 @@ await NULLMODZ.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠ ${prefix}donate
 ╠ ${prefix}request
 ╠ ${prefix}report [bug]
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'ownermenu':
 	   if (isBan) return reply(mess.ban)
@@ -9124,7 +9124,7 @@ await NULLMODZ.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠ ${prefix}bcloc [text]
 ╠ ${prefix}setppbot [image]
 ╠ ${prefix}setexif
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'groupmenu':
 	   if (isBan) return reply(mess.ban)
@@ -9170,7 +9170,7 @@ await NULLMODZ.send5ButImg(from, `╔═══════✪「 GROUP 」
 ╠${prefix}upvote
 ╠${prefix}checkvote
 ╠${prefix}delvote
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'rpgmenu':
 	   if (isBan) return reply(mess.ban)
@@ -9188,7 +9188,7 @@ await NULLMODZ.send5ButImg(from, `╔═══════✪「 RPG 」
 ╠${prefix}profile
 ╠${prefix}inventory
 ╠${prefix}leaderboard
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'makermenu':
 	   if (isBan) return reply(mess.ban)
@@ -9302,7 +9302,7 @@ await NULLMODZ.send5ButImg(from, `╔═══════✪「 MAKER 」
 ╠ ${prefix}halloween
 ╠ ${prefix}watercolor
 ╠ ${prefix}classic
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'downloadmenu':
 	   if (isBan) return reply(mess.ban)
@@ -9329,7 +9329,7 @@ await NULLMODZ.send5ButImg(from, `╔═══════✪「 DOWNLOAD 」
 ╠${prefix}gitclone [repo link]
 ╠${prefix}soundcloud [url]
 ╠${prefix}zippyshare [url]
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'searchmenu':
 	   if (isBan) return reply(mess.ban)
@@ -9361,7 +9361,7 @@ await NULLMODZ.send5ButImg(from, `╔═══════✪「 SEARCH 」
 ╠${prefix}wattpad [query]
 ╠ ${prefix}mcserver [ip|port]
 ╠${prefix}drakor [query]
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'convertmenu':
 	   if (isBan) return reply(mess.ban)
@@ -9396,7 +9396,7 @@ await NULLMODZ.send5ButImg(from, `╔═══════✪「 CONVERT 」
 ╠${prefix}robot [reply aud]
 ╠${prefix}slow [reply aud]
 ╠${prefix}squirrel [reply aud]
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'randomimagemenu':
 	   if (isBan) return reply(mess.ban)
@@ -9415,7 +9415,7 @@ await NULLMODZ.send5ButImg(from, `╔═══════✪「 RANDOM IMG 」
 ╠${prefix}wallcode
 ╠${prefix}animewall [query]
 ╠${prefix}animewall2 [query]
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 
 case 'emotemenu':
@@ -9435,7 +9435,7 @@ await NULLMODZ.send5ButImg(from, `╔═══════✪「 EMOTE 」
 ╠${prefix}googleemoji
 ╠${prefix}pediaemoji
 ╠${prefix}microsoftemoji
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'imageeffectmenu':
 	   if (isBan) return reply(mess.ban)
@@ -9456,7 +9456,7 @@ await NULLMODZ.send5ButImg(from, `╔═════✪「 IMG EFFECT 」
 ╠${prefix}beautifuleffect
 ╠${prefix}deleteeffect
 ╠${prefix}pixelate
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'animemenu':
 	   if (isBan) return reply(mess.ban)
@@ -9510,7 +9510,7 @@ await NULLMODZ.send5ButImg(from, `╔═══════✪「 ANIME 」
 ╠${prefix}megumin2
 ╠${prefix}loli
 ╠${prefix}couplepp
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'stickermenu':
 	   if (isBan) return reply(mess.ban)
@@ -9524,7 +9524,7 @@ await NULLMODZ.send5ButImg(from, `╔═══════✪「 STICKER 」
 ╠ ${prefix}ttp
 ╠ ${prefix}doge
 ╠ ${prefix}lovesticker
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'animestickermenu':
 	   if (isBan) return reply(mess.ban)
@@ -9560,7 +9560,7 @@ await NULLMODZ.send5ButImg(from, `╔═══════✪「 ANIME STICKER �
 ╠${prefix}cringe
 ╠${prefix}neko
 ╠${prefix}gura
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'nsfwmenu':
 	   if (isBan) return reply(mess.ban)
@@ -9592,7 +9592,7 @@ await NULLMODZ.send5ButImg(from, `╔═══════✪「 NSFW 」
 ╠${prefix}spank
 ╠${prefix}hneko
 ╠${prefix}nwaifu
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'funmenu':
 	   if (isBan) return reply(mess.ban)
@@ -9663,7 +9663,7 @@ await NULLMODZ.send5ButImg(from, `╔═══════✪「 Fun 」
 ╠ ${prefix}playboy
 ╠ ${prefix}fuckgirl
 ╠ ${prefix}playgirl
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'soundmenu':
 	   if (isBan) return reply(mess.ban)
@@ -9831,7 +9831,7 @@ await NULLMODZ.send5ButImg(from, `╔═══════✪「 Sound 」
 ╠ ${prefix}sound159
 ╠ ${prefix}sound160
 ╠ ${prefix}sound161
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'gamemenu':
 	   if (isBan) return reply(mess.ban)
@@ -9845,7 +9845,7 @@ await NULLMODZ.send5ButImg(from, `╔═══════✪「 GAME 」
 ╠ ${prefix}guess [option]
 ╠ ${prefix}math [mode]
 ╠ ${prefix}suitpvp [tag]
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'anonymousmenu':
 	   if (isBan) return reply(mess.ban)
@@ -9856,7 +9856,7 @@ await NULLMODZ.send5ButImg(from, `╔═══✪「 ANONYMOUS 」
 ╠${prefix}start
 ╠${prefix}next
 ╠${prefix}leave
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'toolmenu':
 	   if (isBan) return reply(mess.ban)
@@ -9866,7 +9866,7 @@ await NULLMODZ.send5ButImg(from, `╔═══════✪「 TOOL 」
 ╠ ${prefix}translate [text]
 ╠ ${prefix}fliptext [text]
 ╠ ${prefix}toletter [number]
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'databasemenu':
 	   if (isBan) return reply(mess.ban)
@@ -9881,7 +9881,7 @@ await NULLMODZ.send5ButImg(from, `╔═══✪「 DATABASE 」
 ╠ ${prefix}listmsg
 ╠ ${prefix}getmsg
 ╠ ${prefix}delmsg
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'indomenu':
 	   if (isBan) return reply(mess.ban)
@@ -9912,7 +9912,7 @@ await NULLMODZ.send5ButImg(from, `╔═══════✪「 INDO 」
 ╠${prefix}covidindo
 ╠${prefix}earthquake
 ╠${prefix}tvschedule
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'indohoroscopemenu':
 	   if (isBan) return reply(mess.ban)
@@ -9949,7 +9949,7 @@ await NULLMODZ.send5ButImg(from, `╔═✪「 INDO HOROSCOPE 」
 ╠${prefix}masasubur
 ╠${prefix}zodiak
 ╠${prefix}shio
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'true':{
 if (!text) return reply('Give me a number')
@@ -10017,7 +10017,7 @@ await NULLMODZ.send5ButImg(from, `╔═══════✪「 OTHER 」
 ╠ ${prefix}donate
 ╠ ${prefix}request
 ╠ ${prefix}report [bug]
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "LIST","id": 'list'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "WebSite �","url": `${global.websitex}`}},{"urlButton": {"displayText": "Script �","url": `${botscript}`}},{"quickReplyButton": {"displayText": "LIST","id": 'list'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'tqtt': 
 	   if (isBan) return reply(mess.ban)
